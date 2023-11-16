@@ -3,6 +3,8 @@
 
 This repository contains dockerfile, docker-compose and deployment to run pgcopydb in docker or kubernetes.
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/asabhi6776/pgcopydb/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/asabhi6776/pgcopydb/tree/master)
+
 ## Installation
 
 Run this in docker or kubernetes.
