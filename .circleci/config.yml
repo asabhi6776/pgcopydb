@@ -26,7 +26,7 @@ jobs:
       - run:
           name: Build multiarch docker image and push
           command: |
-            DOCKER_CLI_EXPERIMENTAL=enabled docker buildx build --push --platform linux/arm64/v8,linux/amd64 -t asabhi6776/pgcopydb:"multiarch_"$CIRCLE_BRANCH"_"$CIRCLE_BUILD_NUM -t asabhi6776/pgcopydb:latest .
+            DOCKER_CLI_EXPERIMENTAL=enabled docker buildx build --push --platform linux/arm64/v8,linux/amd64 -t asabhi6776/pgcopydb:"multiarch-"$CIRCLE_BRANCH"-"$CIRCLE_BUILD_NUM -t asabhi6776/pgcopydb:latest .
 workflows:
   version: 2.1
   build-and-push-multi-arch-image:
