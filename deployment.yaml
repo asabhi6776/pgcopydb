@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pgcopydb
+spec:
+  selector:
+    matchLabels:
+      app: pgcopydb
+  template:
+    metadata:
+      labels:
+        app: pgcopydb
+    spec:
+      containers:
+        - name: pgcopydb
+          image: gcr.io/zenatix-data-archiver/pgcopydb:0.1
+          command:
+            - /bin/bash
+            - -c
+            - |
+              sleep 10000
+          env:
+            - name: PGCOPYDB_SOURCE_PGURI
+              value: something
+            - name: PGCOPYDB_TARGET_PGURI
+              value: nothing

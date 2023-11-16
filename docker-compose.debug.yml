@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  pgcopydb:
+    image: pgcopydb
+    build:
+      context: .
+      dockerfile: ./Dockerfile
